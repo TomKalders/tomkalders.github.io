@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Conway's Game of Life</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Home</a></h1>
+						<!-- <nav>
+							<a href="../menu">Menu</a>
+						</nav> -->
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>C++ Game Engine</h2>
+								<p>The game Q*bert made in a custom made engine</p>
+								<img src = "../images/QbertAnimation.gif", width="600"></img>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">The Engine</h3>
+									<p> The engine is made in C++ using a variety of design patterns. </p>
+									<p>The main game loop of the engine consists out of: processing the input, updating the application, Updating the scene components and rendering the scene to the window. Delta time is used for frame independant code.</p>
+										
+									
+
+
+<pre style="color:#d1d1d1;background:#242633;"><span style="color:#e66170; font-weight:bold; ">bool</span> doContinue <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">true</span><span style="color:#b060b0; ">;</span>
+		
+<span style="color:#e66170; font-weight:bold; ">auto</span> lastTime <span style="color:#d2cd86; ">=</span> <span style="color:#00dddd; ">std</span><span style="color:#b060b0; ">::</span>chrono<span style="color:#b060b0; ">::</span>high_resolution_clock<span style="color:#b060b0; ">::</span>now<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+<span style="color:#e66170; font-weight:bold; ">while</span><span style="color:#d2cd86; ">(</span>doContinue<span style="color:#d2cd86; ">)</span>
+<span style="color:#b060b0; ">{</span>
+	<span style="color:#e66170; font-weight:bold; ">auto</span> currentTime <span style="color:#d2cd86; ">=</span> <span style="color:#00dddd; ">std</span><span style="color:#b060b0; ">::</span>chrono<span style="color:#b060b0; ">::</span>high_resolution_clock<span style="color:#b060b0; ">::</span>now<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+	<span style="color:#e66170; font-weight:bold; ">float</span> deltaTime <span style="color:#d2cd86; ">=</span> <span style="color:#00dddd; ">std</span><span style="color:#b060b0; ">::</span>chrono<span style="color:#b060b0; ">::</span>duration<span style="color:#b060b0; ">&lt;</span><span style="color:#e66170; font-weight:bold; ">float</span><span style="color:#b060b0; ">&gt;</span><span style="color:#d2cd86; ">(</span>currentTime <span style="color:#d2cd86; ">-</span> lastTime<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">count</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+										
+	doContinue <span style="color:#d2cd86; ">=</span> input<span style="color:#d2cd86; ">.</span>ProcessInput<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#d2cd86; ">&amp;</span> m_Running<span style="color:#b060b0; ">;</span>
+	GameUpdate<span style="color:#d2cd86; ">(</span>deltaTime<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+	sceneManager<span style="color:#d2cd86; ">.</span>Update<span style="color:#d2cd86; ">(</span>deltaTime<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+	renderer<span style="color:#d2cd86; ">.</span>Render<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+										
+	lastTime <span style="color:#d2cd86; ">=</span> currentTime<span style="color:#b060b0; ">;</span>
+<span style="color:#b060b0; ">}</span>
+</pre>
+
+									<h3>Design Patterns:</h3>
+										<ul>
+										<li>Component System</li>
+										<p>
+											Like unity and unreal the engine uses a component based system. You have a basic, empty object called a Gameobject, you add components to this object to add extra functionality.
+											The gameobject has a list of all it's components and will update them when the gameobject is being updated.
+										</p>
+										<li>Command Pattern</li>
+										<p> 
+											The command pattern is used when handling the input. You bind a command, which can take any parameters you want, to a button. 
+											Whenever that button is pressed, released or held the command bound to that button will execute. 
+											This avoids hardwiring input to game actions. It also allows to more easily configure how buttons are mapped to certain actions.
+										</p>
+										<li>Observer Pattern</li>
+										<p>
+											The observer pattern has an object called the subject, which maintains a list of observers. 
+											Whenever the subject does something that other things should know of, it will notify all the observer it has in it's list.
+											It helps with not having tightly coupled objects.
+										</p>
+										<li>Service Locator</li>
+										<p>
+											The service locator is a system that allows you to call a cetain service from anywhere in your code without the code having knowledge of it's implementation.
+											The service is an abstract class inside the locator. The user can implement this interface and register the service to the locator.
+											If no service is registered, the service will default to a null service and will not execute any code when called. This will prefent any NULL references or calls.
+											In the engine it's used for registering and getting a soundsystem. The soundsystem in the engine uses SLDMixer.
+										</p>
+										<li>Event Queue</li>
+										<p>
+											The event queue decouples an event when it's sent from when it's processed. In the engine it's used for the soundsystem. 
+											When a sound needs to be played, it is added to an event queue and is handled on another thread. 
+											With this system the main thread doesn't have to wait until it's done handling the sounds and can just continue, while the sound is handled elsewhere.
+										</p>
+										</ul>
+
+									<h3>Libraries:</h3>
+										<ul>
+											<li><b>glm</b>: mathematics library.</li>
+											<li><b>ImGui</b>: graphical user interface library.</li>
+											<li><b>RapidJSON</b>: fast JSON parser/generator.</li>
+											<li><b>SDL2</b>: cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.</li>
+											<li><b>SDL2 Image</b>: image file loading library.</li>
+											<li><b>SDL2 Mixer</b>: sample multi-channel audio mixer library.</li>
+											<li><b>SDL2 TTF</b>: sample library which allows you to use TrueType fonts in your SDL applications.</li>
+										</ul>
+
+									<h3 class="major">The Game</h3>
+									<p>
+										The game is a recreation of the original 1982 game Q*Bert. The goal of the game, as shown in the gif above, is to turn all the top face colors of the cubes to the same color across the pyramid.
+										The player has 3 lives and get score by killing enemies and changing the color of the cubes.
+										The game has a singleplayer, coop & versus mode. In coop mode you will both be playing as Q*Bert, while in versus mode one of the players will be playing as Coily.
+										You can play the game with both a controller and keyboard.
+										<ul>
+											<li><b>The enemies:</b></li>
+											<ul>
+												<li>Coily: Starts at the top of the level and falls down, after which he will start stalking the player and try to kill him.</li>
+												<li>Ugg & Wrongway: They start at the right and left of the level. The are standing on a different face of the cube and traverse the pyramid sideways. They will hurt the player on contact</li>
+												<li>Slick & Sam: They both start at the top of the level and will decent until they jump off. While descending, they will undo some of the progress the player has made. The player can get rid of them by making contact with them</li>
+											</ul>
+										</ul>
+									</p>
+
+									<h3 class="major">Source Control</h3>
+									<p>All the source code is available on my <a href="https://github.com/TomKalders/KayTee-Game-Engine"><b>GitHub</b></a></p>
+									<!-- <section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section> -->
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<p>Some contact info about me.</p>
+						<form method="post" action="#">
+							<!-- <div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+							</div> -->
+							<!-- <ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul> -->
+						</form>
+						<ul class="contact">
+							<li class="icon solid fa-home">
+								Belgium<br />
+								Limburg, Bilzen
+							</li>
+							<li class="icon solid fa-phone">+32 475 74 66 71</li>
+							<li class="icon solid fa-envelope"><a href="tom.kalders@hotmail.com">tom.kalders@hotmail.com</a></li>
+							<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li> -->
+							<!-- <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+							<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li> -->
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../§assets/js/main.js"></script>
+
+	</body>
+</html>
