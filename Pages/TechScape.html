@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Conway's Game of Life</title>
+		<title>TechScape</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -44,10 +44,11 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Conway's Game of Life in C++</h2>
-								<p>Example of a glider cannon</p>
-								<img src = "../images/Animation.gif", width="600"></img>
+								<h2>TechScape</h2>
+								<p>Result of prototyping</p>
+								<img src = "../images/Prototype.gif" height="400"></img>
 							</div>
+
 						</header>
 
 						<!-- Content -->
@@ -55,20 +56,48 @@
 								<div class="inner">
 
 									<h3 class="major">About</h3>
-									<p> Conway's Game of Life is a zero player game where you give a simulation an initial state, after which you can watch the simulation evolve.
-										It uses cellular automata, a grid of cell with a state (in this case dead or alive), where the neighbours influence the state of the current cell.
-										I'm currently using this for my research project and will be updating it soon to 3D.
+									<p> 
+										TechScape is an escape room like puzzle game where you have to fix various puzzles which are similar to problems someone might have in a real life technician job.
+										Colruyt Group is a giant retail chain in Belgium.
+										The idea is to convince people (mainly people who just graduated secondary school, but not limited to) to join Colruyt Group's technical school to help with technical problems like in the Colruyt store.
+
 									</p>
 										
-									<h3 class="major">Framework</h3>
-									<p>The framework is a small framework made in C++. It uses SDL2 for rendering and user input. Apart from that I also use glm as a math library, mainly used for the vector class.
-										SDL2 is linked dynamically and glm is linked statically.
+									<h3 class="major">Engine</h3>
+									<p>
+										The game is currently being developed in <b>Unity</b> and is being developed for mobile. We got out of prototyping phase and have now started production. 
+										This is the first mobile game project I have worked on.
+									</p>
+									<h3 class="major">Contribution</h3>
+									<p>
+										In the prototyping phase I prototyped: 
+										<li>Rotating a room with objects by swiping over the room</li>
+										<li>Moving between different rooms</li>
+										<li>An inventory system hooked up to a UI</li>
+										<li>A puzzle where you connect wires to activate/repair an object</li>
+										<li>A system that allows for puzzles to be activated/deactivated and have puzzle activate/deactivate other puzzles/objects</li>
+									</p>
+									<p>
+										Currently in the production phase I have mainly worked on a helper script that captures touch input for mobile and calls a corresponding event like, OnTouchBegin or OnTouchMoved and will pass in what it hit and the touch info.
+										This will help keep cleaner code throughout the project and will keep all the touch input handling in one script. 
+										It also helps with performance, due to not having multiple scripts performing a raycast when a finger has touched the screen to check if it hit an object.
 									</p>
 
-									<h3 class="major">Source Code</h3>
-									<p> The source code is on <b><a href = "https://github.com/TomKalders/ConwaysGameOfLife">GitHub</a></b> </p>
-
-
+									<h3 class="major">The Team</h3>
+									<p>
+										<b>Programmers</b>
+										<ul>
+											<li>Tom Kalders: (Me)</li>
+											<li>Pepijn Langeraert: <a href = "https://langeraertpepijn.github.io/" target="_blank">https://langeraertpepijn.github.io/</a></li>
+											<li>Erik De Weert: <a href = ""></a></li>
+										</ul>
+										<b>Artists</b>
+										<ul>
+											<li>Ioana Serban: <a href = ""></a></li>
+											<li>Lend Van Den Berge: <a href = ""></a></li>
+											<li>Brik Gypers: <a href = "https://www.artstation.com/brik_gypers" target="_blank">https://www.artstation.com/brik_gypers</a></li>
+										</ul>
+									</p>
 
 									<!-- <section class="features">
 										<article>
@@ -121,6 +150,7 @@
 							</li>
 							<li class="icon solid fa-phone">+32 475 74 66 71</li>
 							<li class="icon solid fa-envelope"><a href="tom.kalders@hotmail.com">tom.kalders@hotmail.com</a></li>
+							<li class="icon solid fa-"><a href="https://www.linkedin.com/in/tomkalders/" target="_blank">My LinkedIn Page</a></li>
 							<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li> -->
 							<!-- <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
 							<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li> -->

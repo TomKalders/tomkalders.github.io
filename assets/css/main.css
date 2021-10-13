@@ -4038,6 +4038,10 @@ input, select, textarea {
 			/*width: calc(50% - 1.5em);*/
 		}
 
+		#footer .inner .photo {
+			width: calc(50% - 1.5em);
+		}
+
 		#footer .inner .copyright {
 			border-top: solid 2px rgba(255, 255, 255, 0.125);
 			list-style: none;

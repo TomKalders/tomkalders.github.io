@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Conway's Game of Life</title>
+		<title>C++ Game Engine</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -89,7 +89,7 @@
 										<p> 
 											The command pattern is used when handling the input. You bind a command, which can take any parameters you want, to a button. 
 											Whenever that button is pressed, released or held the command bound to that button will execute. 
-											This avoids hardwiring input to game actions. It also allows to more easily configure how buttons are mapped to certain actions.
+											This avoids hard-wiring input to game actions. It also allows to more easily configure how buttons are mapped to certain actions.
 										</p>
 										<li>Observer Pattern</li>
 										<p>
@@ -99,14 +99,14 @@
 										</p>
 										<li>Service Locator</li>
 										<p>
-											The service locator is a system that allows you to call a cetain service from anywhere in your code without the code having knowledge of it's implementation.
+											The service locator is a system that allows you to call a certain service from anywhere in your code without the code having knowledge of it's implementation.
 											The service is an abstract class inside the locator. The user can implement this interface and register the service to the locator.
-											If no service is registered, the service will default to a null service and will not execute any code when called. This will prefent any NULL references or calls.
-											In the engine it's used for registering and getting a soundsystem. The soundsystem in the engine uses SLDMixer.
+											If no service is registered, the service will default to a null service and will not execute any code when called. This will prevent any NULL references or calls.
+											In the engine it's used for registering and getting a sound system. The sound system in the engine uses SLDMixer.
 										</p>
 										<li>Event Queue</li>
 										<p>
-											The event queue decouples an event when it's sent from when it's processed. In the engine it's used for the soundsystem. 
+											The event queue decouples an event when it's sent from when it's processed. In the engine it's used for the sound system. 
 											When a sound needs to be played, it is added to an event queue and is handled on another thread. 
 											With this system the main thread doesn't have to wait until it's done handling the sounds and can just continue, while the sound is handled elsewhere.
 										</p>
@@ -127,7 +127,7 @@
 									<p>
 										The game is a recreation of the original 1982 game Q*Bert. The goal of the game, as shown in the gif above, is to turn all the top face colors of the cubes to the same color across the pyramid.
 										The player has 3 lives and get score by killing enemies and changing the color of the cubes.
-										The game has a singleplayer, coop & versus mode. In coop mode you will both be playing as Q*Bert, while in versus mode one of the players will be playing as Coily.
+										The game has a single-player, coop & versus mode. In coop mode you will both be playing as Q*Bert, while in versus mode one of the players will be playing as Coily.
 										You can play the game with both a controller and keyboard.
 										<ul>
 											<li><b>The enemies:</b></li>
@@ -140,7 +140,7 @@
 									</p>
 
 									<h3 class="major">Source Control</h3>
-									<p>All the source code is available on my <a href="https://github.com/TomKalders/KayTee-Game-Engine"><b>GitHub</b></a></p>
+									<p>All the source code is available on my <a href="https://github.com/TomKalders/KayTee-Game-Engine" target="_blank"><b>GitHub</b></a></p>
 									<!-- <section class="features">
 										<article>
 											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
@@ -192,6 +192,7 @@
 							</li>
 							<li class="icon solid fa-phone">+32 475 74 66 71</li>
 							<li class="icon solid fa-envelope"><a href="tom.kalders@hotmail.com">tom.kalders@hotmail.com</a></li>
+							<li class="icon solid fa-"><a href="https://www.linkedin.com/in/tomkalders/" target="_blank">My LinkedIn Page</a></li>
 							<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li> -->
 							<!-- <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
 							<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li> -->
