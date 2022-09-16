@@ -29,6 +29,19 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+video
+{
+	border-radius: 3%;
+}
+
+img{
+	border-radius: 3%;
+}
+
+img.circle{
+	border-radius: 50%;
+}
+
 body {
 	line-height: 1;
 }
@@ -176,7 +189,7 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
-		color: #ffffff;
+		color: #00ccff; /*Changed from #ffffff*/
 		text-decoration: none;
 	}
 
@@ -238,7 +251,7 @@ input, select, textarea {
 			}
 
 	strong, b {
-		color: #ffffff;
+		color: #02eeff; /*Changed from #ffffff*/
 		font-weight: 600;
 	}
 

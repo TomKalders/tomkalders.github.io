@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Rhinox - Metaverse Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <noscript>
+            <link rel="stylesheet" href="../assets/css/noscript.css">
+        </noscript>
+    </head>
+    <body class="is-preload">
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+            <!-- Header -->
+            <header id="header">
+                <h1>
+                    <a href="../index.html">Home</a>
+                </h1>
+                <!-- <nav>
+							<a href="../menu">Menu</a>
+						</nav> -->
+            </header>
+            <!-- Menu -->
+            <nav id="menu">
+                <div class="inner">
+                    <h2>Menu</h2>
+                    <ul class="links">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="generic.html">Generic</a>
+                        </li>
+                        <li>
+                            <a href="elements.html">Elements</a>
+                        </li>
+                        <li>
+                            <a href="#">Log In</a>
+                        </li>
+                        <li>
+                            <a href="#">Sign Up</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="close">Close</a>
+                </div>
+            </nav>
+
+            <!-- Wrapper -->
+            <section id="wrapper">
+                <header>
+                    <div class="inner">
+                        <h2>Rhinox - VR Metaverse Project</h2>
+                        <p>Connect to a multiplayer room where you can talk with other people.</p>
+                        <img src = "../Images/Metaverse/Screenshot_1.png", width="1000"></img>
+                    </div>
+
+                </header>
+				
+                <!-- Content -->
+                <div class="wrapper">
+                    <div class="inner">
+                        <h3 class="major">About</h3>
+                        <p>
+                            <!-- This is a project I worked on on my internship at Rhinox, located in Kortrijk. I was tasked to work out how to start a project that would follow the lines of the metaverse.
+                            The idea was to be able to join a room with other people and gather for a meeting in <b>'Virtual Reality'</b>. 
+                            <b>The main features are:</b>
+                            <li><b>Connect from anywhere</b> to a server</li>
+                            <li>Meet with people in the virtual environment</li>
+                            <li>Communicate with other people using <b>voice chat</b></li>
+                            <li>Share a <b>PowerPoint</b> file with everyone in the server</li>
+                            <br></br>
+                            I began the project with trying to get some ideas to implement and researching already existing applications. I showed my ideas to the rest of the team and went over what would be possible and what not.
+                            <br></br>
+                            The next 1/2 weeks were doing some prototyping with the avatar package which I would be using, a package called <b>'Ready Player Me'</b>, 
+                            alongside practising a bit with the networking as I have never done multiplayer.
+                            <br></br>
+                            The next coming weeks  -->
+                            This is a project I worked on at my internship at Rhinox. 
+                            I had a lot of fun learning a lot of new things in Unity, which was my main goal of doing my internship there.
+                            I wanted to learn about VR and got to do some networking with it as well. 
+                        </p>
+                        <h3 class="major">Engine</h3>
+                        <p>
+                            The application was created in Unity C#, because I'm familiar with the engine and this was the engine used at the company.
+                            There are also a lot of packages available for the multiplayer aspect of the application alongside a whole range of other packages and tools, both public and in-house ones. 
+
+                        </p>
+                        <h3 class="major">What Did I Learn?</h3>
+
+                        <p>
+                            During my internship I learned many interesting things and explored a lot of areas I had not yet explored, that mainly being networking and VR.
+                        
+                            As it was my first time creating a application in virtual reality I learned a lot in a lot of different aspects like the setup and development environment used for VR development.
+                            Also what you can, can't and shouldn't do in VR. The VR framework I used was <b>'Unity XR Interaction Toolkit'</b> and the project was designed to be a standalone application on <b>'The Oculus Quest 2'</b> .
+                        </br></br>
+
+                        <p>"Teleporting around in the virtual environment which is networked to all other clients."</p>
+                        <img src = "../Images/Metaverse/Screenshot_2.png", width="1000"></img>
+                        </br></br>
+
+                        In the project I used a Unity package called <b>'Mirror'</b> which is a fork of Unity's old networking solution with a bunch of bugfixes and new features.
+                        I used this to implement all the networking present in the application. The main parts that are networked are the users that join the rooms and the PowerPoint presentation.
+                        The application uses a server-client model as opposed to a peer-to-peer network.</br>
+                        Alongside networking I also implemented a voice chat system <b>'Vivox'</b> which allows you to connect to a voice room and talk to all the people around you with positional audio.
+                        I really enjoyed the networking part and it really expanded my knowledge on it, but still have a lot to learn as well. 
+                        </br></br>
+
+                        One of the other main challenges was <b>'integrating PowerPoint presentations'</b>, mainly because Office's PowerPoint files are not easy to convert to a suitable filetype that can be used by Unity to show it in engine.
+                        I ended up using a python script that uses Microsoft's DLL's to convert the PowerPoint file to images (JPG's). 
+                        This comes with the drawback that to be able to convert the images the server needs to have a version of PowerPoint installed to be able to access the necessary libraries.
+                        Sending over the the PowerPoint images back over the internet also proved a challenge, but I got it working in the end.   
+                        </br></br>
+
+                        <p>"A PowerPoint presentation that is loaded in and shown to all other connected clients."</p>
+                        <img src = "../Images/Metaverse/Screenshot_3.png", width="1000"></img>
+                        </br></br>
+
+                        My coworkers really helped me to expand my knowledge on not only on programming but also on the framework they use and even the Unity engine itself, 
+                        as they have a thorough and deep understanding of the engine and it's inner workings.
+
+                        </p>
+
+                        <p>
+                            <!--Contributions content--></p>
+                        <h3 class="major">The Company</h3>
+                        <img class="circle" src = "../Images/Metaverse/RhinoxLogo.png", width="200", class="a"></img>
+                        </br>
+                        <p>
+                            Rhinox is a company which, using their modular VR/AR framework, offers effective solutions in training, simulation and visualization without having to start from scratch.
+                            They can convert a wide range of CAD file formats to VR/AR-ready 3D assets which allows them to easily create and update your content and sequences.
+                            <p>
+								Website: <a href="https://www.rhinox.be/">https://www.rhinox.be/</a></br>
+                                E-mail: <a href="hello@rhinox.be">hello@rhinox.be</a>
+							</p>
+                        </p>
+                        <!--<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section> -->
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section id="footer">
+                <div class="inner">
+                    <h2 class="major">Get in touch</h2>
+                    <p>Some contact info about me.</p>
+                    <form method="post" action="#">
+                        <!-- <div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+							</div> -->
+                        <!-- <ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul> --></form>
+                    <ul class="contact">
+                        <li class="icon solid fa-home">
+                            Belgium<br />
+                            Limburg, Bilzen
+                        </li>
+                        <li class="icon solid fa-phone">+32 475 74 66 71</li>
+                        <li class="icon solid fa-envelope"><a href="tom.kalders@hotmail.com">tom.kalders@hotmail.com</a></li>
+                        <li class="icon solid fa-linkedin"><a href="https://www.linkedin.com/in/tomkalders/" target="_blank">My LinkedIn Page</a></li>
+                        <!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li> -->
+                        <!-- <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+							<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li> -->
+                    </ul>
+                    <ul class="copyright">
+                        <!-- <li>&copy; Untitled Inc. All rights reserved.</li> -->
+                        <!-- <li>Design:
+                            <a href="http://html5up.net">HTML5 UP</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../§assets/js/main.js"></script>
+    </body>
+</html>

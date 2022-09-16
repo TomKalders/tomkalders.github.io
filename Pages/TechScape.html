@@ -45,8 +45,18 @@
 						<header>
 							<div class="inner">
 								<h2>TechScape</h2>
-								<p>Result of prototyping</p>
+
+								<p>Final result</p>
+								<video height="400" controls>
+									<source src="../images/Techscape/Group04_TechScape_Trailer.mp4" type="video/mp4">
+								  Your browser does not support the video tag.
+								  </video>
+
+								</br></br></br>
+								<p>End of prototyping phase</p>
 								<img src = "../images/Prototype.gif" height="400"></img>
+								
+
 							</div>
 
 						</header>
@@ -60,27 +70,35 @@
 										TechScape is an escape room like puzzle game where you have to fix various puzzles which are similar to problems someone might have in a real life technician job.
 										Colruyt Group is a giant retail chain in Belgium.
 										The idea is to convince people (mainly people who just graduated secondary school, but not limited to) to join Colruyt Group's technical school to help with technical problems like in the Colruyt store.
-
+									</br>>We had 4 weeks of prototyping and 6 weeks of production.
 									</p>
 										
 									<h3 class="major">Engine</h3>
 									<p>
-										The game is currently being developed in <b>Unity</b> and is being developed for mobile. We got out of prototyping phase and have now started production. 
-										This is the first mobile game project I have worked on.
+										The game was developed in <b>Unity, C#</b> and is designed to be played on smartphones. 
+										This was our first project designed for a mobile platform, Android. we learned a lot about the android SDK's, Unity Remote and other tools to debug and design our project.
+
 									</p>
 									<h3 class="major">Contribution</h3>
 									<p>
-										In the prototyping phase I prototyped: 
-										<li>Rotating a room with objects by swiping over the room</li>
-										<li>Moving between different rooms</li>
-										<li>An inventory system hooked up to a UI</li>
-										<li>A puzzle where you connect wires to activate/repair an object</li>
-										<li>A system that allows for puzzles to be activated/deactivated and have puzzle activate/deactivate other puzzles/objects</li>
+										In this project I designed: 
+										<li>Input system based on an event system</li>
+										<li>Room and puzzle inspection mechanic</li>
+										<li>Level navigation system</li>
+										<li>An inventory system</li>
+										<li>Puzzle Design</li>
+										<li>A system that links puzzles and intractable objects with each other based on conditions</li>
 									</p>
 									<p>
-										Currently in the production phase I have mainly worked on a helper script that captures touch input for mobile and calls a corresponding event like, OnTouchBegin or OnTouchMoved and will pass in what it hit and the touch info.
+										I have mainly worked on a helper script that captures touch input for mobile and calls a corresponding event like, OnTouchBegin or OnTouchMoved and will pass in what it hit and the touch info.
 										This will help keep cleaner code throughout the project and will keep all the touch input handling in one script. 
-										It also helps with performance, due to not having multiple scripts performing a raycast when a finger has touched the screen to check if it hit an object.
+										<p>
+										</p>
+										It also helps with performance, due to not having multiple scripts performing a raycast when a finger has touched the screen to check if it hit an object. This also made the game loop more event based than update based.
+										There are not many update functions present in the scripts of our project.
+									<p>
+									</p>
+										Most animations are done with coroutines using the build-in system in the LeanTween package in Unity.
 									</p>
 
 									<h3 class="major">The Team</h3>
@@ -150,7 +168,7 @@
 							</li>
 							<li class="icon solid fa-phone">+32 475 74 66 71</li>
 							<li class="icon solid fa-envelope"><a href="tom.kalders@hotmail.com">tom.kalders@hotmail.com</a></li>
-							<li class="icon solid fa-"><a href="https://www.linkedin.com/in/tomkalders/" target="_blank">My LinkedIn Page</a></li>
+							<li class="icon solid fa-linkedin"><a href="https://www.linkedin.com/in/tomkalders/" target="_blank">My LinkedIn Page</a></li>
 							<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li> -->
 							<!-- <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
 							<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li> -->
