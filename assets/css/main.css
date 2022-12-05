@@ -38,8 +38,24 @@ img{
 	border-radius: 3%;
 }
 
-img.circle{
+img.profile{
 	border-radius: 50%;
+}
+
+img.profile
+{
+	/* -moz-transition: opacity 2s ease, -moz-transform 1s ease;
+	-webkit-transition: opacity 2s ease, -webkit-transform 1s ease;
+	-ms-transition: opacity 2s ease, -ms-transform 1s ease;
+	transition: opacity 2s ease, transform 1s ease;
+	-moz-transform: translateY(0.5em);
+	-webkit-transform: translateY(0.5em);
+	-ms-transform: translateY(0.5em);
+	transform: translateY(0.5em); 
+	opacity: 1;
+	margin: 0 0 1.3em 0;*/
+	border-radius: 50%;
+	transition-timing-function: ease-in;
 }
 
 body {

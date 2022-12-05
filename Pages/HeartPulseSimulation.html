@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Heart Pulse Simulation Using Cellular Automata</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">Home</a></h1>
+						<!-- <nav>
+							<a href="../menu">Menu</a>
+						</nav> -->
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="generic.html">Generic</a></li>
+								<li><a href="elements.html">Elements</a></li>
+								<li><a href="#">Log In</a></li>
+								<li><a href="#">Sign Up</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Heart pulse simulation using cellular automata</h2>
+								<p>This is a project created for my graduation work at Howest University of Applied Sciences in the major Game Development. This was in collaboration with KULeuven.</p>
+								<img src = "../images/HeartPulseSimulation/PulsePropagationNormalView.gif", width="600"></img>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">About</h3>
+									<p> 
+										This project was created to see if we could simulate a heart pulse going through a 3D <b>volumetric</b> mesh using cellular automata as opposed to the currently mainly used differential equations.</br></br>
+										Cellular automata is a system that uses a grid of cells, where each cell has a certain state. Depending on the state of one cell's neighboring cells, that cell might change to a different state. The given rule-set determines what state the cell is going to change in to.
+										One of the most famous examples of an application of cellular automata is Conway's Game of Life, which is one of the first projects I created in the custom framework I made.</br></br>
+										This is a "Glider Cannon" created in my version of Conway's Game of Life. It's a device that creates the smaller tiny airplane-like objects flying to the bottom-right of the screen.</br>
+										<img src = "../images/HeartPulseSimulation/Animation.gif" height = "300"></img>
+										</br></br>
+										In this project the cellular automata is applied in such a way that the vertices of the mesh are considered the cells and can be either 1 of 3 given states. The states correspond to the phases a pulse can be in:
+									
+										<li>Active Potential Duration</li>
+										<li>Recovery Time</li>
+										<li>Diastolic Interval</li>
+										</br>
+										<img src = "../images/HeartPulseSimulation/States3.png" height="300"></img></br></br>
+										The pulse propagates from one vertex to it's connected vertices, taking in to account the distance they have to travel. Because it's a volumetric mesh, the mesh has a thickness. 
+										Because of this I had to connect the outer part of the mesh with the inner part of the mesh. I used an algorithm that takes in to account the distance and the normal to determine if a point should be connected.</br></br>
+										example of <b>surface</b> mesh versus a <b>volumetric</b> mesh</br>
+										<img src = "../images/HeartPulseSimulation/VolumeVSSurface.png" height="300"></img>
+										<img src = "../images/HeartPulseSimulation/PulsePropagationWireframeView.gif" height="300"></img></br></br>
+
+										One of the last thing I tried to implement, but sadly didn't get working was the fibre direction. A heart is made out of fibres which go a certain direction. Depending on the direction the pulse can go faster of slower.
+										A pulse going alongside the fibre direction will travel much faster than one that travels against one.</br></br>
+										<img src = "../images/HeartPulseSimulation/sketch-layered-myocardium-teaser.jpg" height="300"></img>
+									</p>
+										
+									<h3 class="major">Framework</h3>
+									<p>
+										The framework I used is a custom made framework that I made for this project. It's created in C++. 
+										I have 2 renderers implemented, one using <b>SDL2</b> (mainly for 2D rendering) while the other one uses <b>DirectX 11</b> alongside legacy DirectX effects.</br>
+										The math library I used was GLM.</br>
+										For the drawing of the GUI I used Dear ImGUI, which I used a lot for triggering functions and putting in data.</br>
+										<img src="../images/HeartPulseSimulation/VertexData1.png" height="300"></img>
+										<img src="../images/HeartPulseSimulation/VertexData2.png" height="300"></img>
+									
+									</br></br>
+										The main class is the "Application" class that initializes the entire program and handles the update loop.</br>
+										This class also contains a "Renderer" class which is used to draw to the screen.</br></br>
+										Checking the states and changing them is handled on the CPU, while the drawing and rendering is handled on the GPU with the help of DirectX.
+									</p>
+
+									<!-- <h3 class="major">Source Code</h3>
+									<p> The source code is on <b><a href = "https://github.com/TomKalders/ConwaysGameOfLife" target="_blank">GitHub</a></b> </p> -->
+
+									
+
+									<!-- <section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section> -->
+
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+				<section id="footer">
+					<div class="inner">
+						<h2 class="major">Get in touch</h2>
+						<p>Some contact info about me.</p>
+						<form method="post" action="#">
+							<!-- <div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+							</div> -->
+							<!-- <ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul> -->
+						</form>
+						<ul class="contact">
+							<li class="icon solid fa-home">
+								Belgium<br />
+								Limburg, Bilzen
+							</li>
+							<li class="icon solid fa-phone">+32 475 74 66 71</li>
+							<li class="icon solid fa-envelope"><a href="tom.kalders@hotmail.com">tom.kalders@hotmail.com</a></li>
+							<li class="icon solid fa-linkedin"><a href="https://www.linkedin.com/in/tomkalders/" target="_blank">My LinkedIn Page</a></li>
+							<!-- <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li> -->
+							<!-- <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+							<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li> -->
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../§assets/js/main.js"></script>
+
+	</body>
+</html>
